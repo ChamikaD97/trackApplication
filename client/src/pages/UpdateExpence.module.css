@@ -21,3 +21,17 @@
   grid-area: expence;
   margin: 1%;
 }
+@media screen and (max-width: 750px) {
+  .mainGrid {
+    display: grid;
+    width: auto;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: 0.7fr 1fr 1fr 1fr;
+    grid-template-rows: 0.05fr 0.2fr 0.1fr 0.2fr;
+    grid-template-areas:
+      "navigation navigation  navigation navigation"
+      "heading heading  heading heading"
+      "expence expence  expence expence";
+  }
+}

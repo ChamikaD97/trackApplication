@@ -14,6 +14,30 @@
   }
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #052740;
+
+  border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border:1px white solid;
+  background-color: #601564;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  border:1px white solid;
+  background: #052740;
+  transition: 800ms;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

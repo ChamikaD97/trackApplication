@@ -57,7 +57,7 @@ function Progress() {
   return (
     <>
       <div className={styles.progresBar} width={50} id="progresBar">
-        {currentValue} Used({progressWidth})
+        {used} Used({progressWidth})
       </div>
     </>
   );

@@ -17,20 +17,19 @@ function Dashboard() {
       <div className={styles.mainGrid}>
         <Navigation />
         <h1 className={styles.heading}>Dashboard</h1>
-
         <div className={styles.progress}>
           <Progress />{" "}
         </div>
         <div className={styles.progress}></div>
 
         <div className={styles.chart}>
-          <p className="cardText">This Month Expences</p>
+          <p className={styles.cardText}>This Month Expences</p>
           <hr />
           <PieChart />
         </div>
 
         <div className={styles.chart2}>
-          <p className="cardText">Change of Monthly Limit</p>
+          <p className={styles.cardText}>Change of Monthly Limit</p>
           <hr />
           <LineChart />
         </div>
@@ -38,21 +37,21 @@ function Dashboard() {
           <Remaining />
         </div>
         <div className={styles.maxMonth}>
-          <p className="cardText">Maxmimum Expence Last Year</p>
+          <p className={styles.cardText}>Maxmimum Expence Last Year</p>
           <hr />
           <div className={styles.centerDiv}>
             <RecentMaxLastYear />
           </div>
         </div>
         <div className={styles.maxDay}>
-          <p className="cardText">Maxmimum Expence Categry</p>
+          <p className={styles.cardText}>Maxmimum Expence Categry</p>
           <hr />
           <div className={styles.centerDiv}>
             <MaxCategory />
           </div>
         </div>
         <div className={styles.maxYear}>
-          <p className="cardText">Total Expences Of You</p>
+          <p className={styles.cardText}>Total Expences Of You</p>
           <hr />
           <div className={styles.centerDiv}>
             <Total />

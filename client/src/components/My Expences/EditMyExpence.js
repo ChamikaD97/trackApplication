@@ -1,10 +1,11 @@
 import React from "react";
 import "./EditForm.css";
 import EditForm from "./EditForm";
+
 function EditMyExpence() {
   return (
     <>
-      <div className="mainGridNew">
+      <div className="mainGridEdit">
         <EditForm />
       </div>
     </>

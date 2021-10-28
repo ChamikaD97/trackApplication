@@ -25,6 +25,9 @@ function AllExpences() {
     history.push("updateExpence/" + event.target.value);
   };
 
+
+
+  
   useEffect(() => {
     axios
       .post("http://localhost:3001/Expence/getAllExpences")
@@ -84,7 +87,7 @@ function AllExpences() {
     ));
   return (
     <>
-      <div className="mainGrid">
+      <div className="mainGridAll">
         <div className="recentExpences">
           <p className="cardText">
             You Can Filter Your Past Expences Made By You
@@ -133,7 +136,7 @@ function AllExpences() {
                 <th>Expence Type</th>
                 <th> Amount</th>
                 <th> Description</th>
-                <th> Edit or Delete</th>
+                <th></th>
               </tr>
               {expences}
             </table>

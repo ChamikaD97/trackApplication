@@ -81,7 +81,12 @@
   border: solid 1px #000000;
   grid-area: maxDay;
 }
-
+.cardText {
+  padding-left: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  grid-area: subtitle;
+}
 .maxYear {
   grid-area: maxYear;
   margin: 2%;
@@ -91,7 +96,7 @@
 }
 .centerDiv {
   display: flex;
-  color: rgb(18, 86, 141);
+  color: #398b23;
   justify-content: center;
 }
 @media screen and (max-width: 750px) {
@@ -128,6 +133,12 @@
   p {
     margin: 1%;
     font-size: 15px;
+  }
+  .cardText {
+    padding-left: 15 px;
+    font-size: 18px;
+    font-weight: 500;
+    grid-area: subtitle;
   }
   .maxMonth {
     grid-area: maxMonth;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CountUp from "react-countup";
-import styles from  "./AddExpences.css";
+import  "./AddExpences.css";
 
 var today = new Date(),
   Currentdate =

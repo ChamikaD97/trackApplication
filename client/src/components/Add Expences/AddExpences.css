@@ -4,21 +4,22 @@
   height: fit-content;
   background-color: rgb(255, 255, 255);
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.2fr 0.1fr ;
+  grid-template-rows: 0.2fr 0.1fr;
   grid-template-areas:
     "addForm changeForm"
     "addForm changeForm";
-}
-
-.changeForm .subtitle {
-  display: flex;
-  font-size: 25px;
-  justify-content: center;
 }
 .mainGridNew .lable {
   margin-left: 15px;
   font-weight: 500px;
   font-size: 18px;
+}.mainGridNew .select {
+  margin: 2%;
+  width: 93%;
+  padding-left: 10px;
+  font-size: 18px;
+  height: 30px;
+  border-radius: 5px;
 }
 .mainGridNew .monthlyExpence {
   display: flex;
@@ -34,12 +35,9 @@
   height: 25px;
   border-radius: 5px;
 }
-.addForm .cardText{
-  
-}
-.changeForm .updateVal {
+.mainGridNew .updateVal {
   margin: 2%;
-  width: 65%;
+  width: 70%;
   padding-left: 10px;
   font-size: 20px;
   height: 25px;
@@ -52,14 +50,13 @@
   font-size: 20px;
   border-radius: 5px;
 }
-.mainGridNew .select {
-  margin: 2%;
-  width: 93%;
-  padding-left: 10px;
+.mainGridNew .cardText {
+  padding-left: 15px;
   font-size: 18px;
-  height: 30px;
-  border-radius: 5px;
+  font-weight: 500;
+  grid-area: subtitle;
 }
+
 .mainGridNew .addForm {
   grid-area: addForm;
   background-color: rgb(255, 255, 255);
@@ -78,8 +75,9 @@
   border-radius: 10px;
   border: solid 1px #000000;
   margin-right: 3%;
+  height: fit-content;
 }
-.addForm .addNew {
+.mainGridNew .addNew {
   background-color: #398b23;
   font-size: 18px;
   border-radius: 10px;
@@ -91,8 +89,8 @@
   padding-right: 30px;
   padding-left: 30px;
 }
-.addForm .clear {
-  background-color: #B21500;
+.mainGridNew .addForm .clear {
+  background-color: #b21500;
   font-size: 18px;
   border-radius: 10px;
   height: 40px;
@@ -104,7 +102,7 @@
   padding-left: 30px;
 }
 
-.changeForm .update {
+.mainGridNew .update {
   background-color: #398b23;
   font-size: 18px;
   border-radius: 10px;
@@ -117,5 +115,25 @@
   margin-left: 2%;
   padding-right: 30px;
   padding-left: 30px;
-  
+}
+@media screen and (max-width: 750px) {
+  .mainGridNew {
+    display: grid;
+    width: auto;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.1fr;
+    grid-template-areas:
+      "navigation navigation"
+      "addForm addForm"
+      "changeForm changeForm";
+  }
+  .navigation {
+    height: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    grid-area: navigation;
+    background-color: #601564;
+  }
 }

@@ -10,7 +10,7 @@ function NewExpences() {
         <Navigation />
         <h1 className={styles.heading}>Expence Management</h1>
         <div className={styles.expences}>
-          <ExpenceSector className="expence" />
+          <ExpenceSector className={styles.mainGrid}/>
         </div>
       </div>
     </>

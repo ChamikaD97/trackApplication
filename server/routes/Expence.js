@@ -74,7 +74,7 @@ Expence.post("/updateMax", async (req, res) => {
 Expence.post("/getMax", (req, res) => {
   connection.query(
     "SELECT newValue FROM `maxexpence`  ORDER BY `maxexpence`.`id` DESC limit 1",
-    (error, result, feilds) => {
+    (error, result) => {
       if (error) console.log(error);
       else {
         res.send(result);
@@ -88,7 +88,7 @@ Expence.post("/deleteExpence", (req, res) => {
 
   connection.query(
     "delete from expences where id =" + id,
-    (error, result, feilds) => {
+    (error, result) => {
       if (error) console.log(error);
       else {
         res.send(result);
@@ -100,7 +100,7 @@ Expence.post("/deleteExpence", (req, res) => {
 Expence.post("/getAllExpences", (req, res) => {
   connection.query(
     "SELECT * FROM `expences` ORDER BY `expences`.`date` DESC    ",
-    (error, result, feilds) => {
+    (error, result) => {
       if (error) console.log(error);
       else {
         res.send(result);
@@ -112,7 +112,7 @@ Expence.post("/getAllExpences", (req, res) => {
 Expence.post("/getTotal", (req, res) => {
   connection.query(
     "SELECT SUM(Amount) AS total FROM expences;",
-    (error, result, feilds) => {
+    (error, result) => {
       if (error) console.log(error);
       else {
         res.send(result);
@@ -126,7 +126,7 @@ Expence.post("/getRecentMaxLastYear", (req, res) => {
 
   connection.query(
     "SELECT * FROM `expences` WHERE date like '%'  ORDER BY `expences`.`Amount` DESC LIMIT 1;",
-    (error, result, feilds) => {
+    (error, result) => {
       if (error) console.log(error);
       else {
         res.send(result);
@@ -139,8 +139,10 @@ Expence.post("/pieChartData", (req, res) => {
   const month = req.body.month;
 
   connection.query(
-    "select SUM(Amount) as amount ,type from expences where date like '"+month+"%' group by type ORDER BY `amount`;",
-    (error, result, feilds) => {
+    "select SUM(Amount) as amount ,type from expences where date like '" +
+      month +
+      "%' group by type ORDER BY `amount`;",
+    (error, result) => {
       if (error) console.log(error);
       else {
         res.send(result);
@@ -154,7 +156,7 @@ Expence.post("/lineChartData", (req, res) => {
 
   connection.query(
     "SELECT * FROM `maxexpence` ORDER BY `maxexpence`.`id` ASC",
-    (error, result, feilds) => {
+    (error, result) => {
       if (error) console.log(error);
       else {
         res.send(result);
@@ -164,11 +166,10 @@ Expence.post("/lineChartData", (req, res) => {
 });
 
 Expence.post("/getUsedValues", (req, res) => {
-  const month = req.body.month;
 
   connection.query(
     "SELECT SUM(Amount) As used FROM `expences` WHERE date like '2021-10-%'  ORDER BY `expences`.`Amount`;",
-    (error, result, feilds) => {
+    (error, result) => {
       if (error) console.log(error);
       else {
         res.send(result);
@@ -180,7 +181,7 @@ Expence.post("/getUsedValues", (req, res) => {
 Expence.post("/MaxCategery", (req, res) => {
   connection.query(
     "select SUM(Amount) as amount ,type from expences group by type  ORDER BY `amount`  DESC LIMIT 1;",
-    (error, result, feilds) => {
+    (error, result) => {
       if (error) console.log(error);
       else {
         res.send(result);
@@ -192,7 +193,7 @@ Expence.post("/MaxCategery", (req, res) => {
 Expence.post("/getCurrentValue", (req, res) => {
   connection.query(
     "SELECT * FROM `maxexpence` ORDER BY `maxexpence`.`id` DESC LIMIT 1;",
-    (error, result, feilds) => {
+    (error, result) => {
       if (error) console.log(error);
       else {
         res.send(result);
@@ -205,7 +206,7 @@ Expence.post("/getExpenceToEdit", (req, res) => {
   const id = req.body.id;
   connection.query(
     "SELECT * FROM `expences` where id=" + id,
-    (error, result, feilds) => {
+    (error, result) => {
       if (error) console.log(error);
       else {
         res.send(result);
@@ -241,9 +242,8 @@ Expence.post("/getFilteredData", (req, res) => {
     "%' And description like '" +
     description +
     "%' ORDER BY `expences`.`date` DESC ";
-  console.log(sql);
 
-  connection.query(sql, (error, result, feilds) => {
+  connection.query(sql, (error, result) => {
     if (error) console.log(error);
     else {
       res.send(result);
