@@ -9,6 +9,7 @@ function Progress() {
   var today = new Date(),
     Currentdate = today.getFullYear() + "-" + (today.getMonth() + 1) + "-";
   let progressWidth = Math.round(percentage) + "%";
+  
 
   if (percentage > 100) {
     document.getElementById("progresBar").style.background = "#B21500";

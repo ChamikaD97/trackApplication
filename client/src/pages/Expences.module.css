@@ -14,8 +14,6 @@
 .heading {
   margin: 1%;
   grid-area: heading;
-
-  padding-left: 10px;
 }
 
 .expences {

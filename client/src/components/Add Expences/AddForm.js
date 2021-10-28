@@ -11,7 +11,7 @@ var first = new Date(),
 function AddForm() {
   const [date, setDate] = useState(Currentdate);
   const [type, setType] = useState("Select Any Type");
-  const [info, setInfo] = useState("Add New Expence");
+  const [info, setInfo] = useState("Add New Expence - You Can Only Add Expences for this Month");
   const [amount, setAmount] = useState(0);
 
   const [description, setDescription] = useState("");

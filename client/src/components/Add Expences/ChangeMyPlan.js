@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CountUp from "react-countup";
-import  "./AddExpences.css";
+import "./AddExpences.css";
 
 var today = new Date(),
   Currentdate =
     today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
 function ChangeMyPlan() {
-  const [maxOld, setCurrentMonthlyExpence] = useState();
+  const [maxOld, setCurrentMonthlyExpence] = useState(0);
   const [newMax, setNew] = useState();
   function update() {
     const formData = {
