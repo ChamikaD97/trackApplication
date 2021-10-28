@@ -1,0 +1,121 @@
+.mainGridNew {
+  display: grid;
+  width: auto;
+  height: fit-content;
+  background-color: rgb(255, 255, 255);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 0.1fr ;
+  grid-template-areas:
+    "addForm changeForm"
+    "addForm changeForm";
+}
+
+.changeForm .subtitle {
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+}
+.mainGridNew .lable {
+  margin-left: 15px;
+  font-weight: 500px;
+  font-size: 18px;
+}
+.mainGridNew .monthlyExpence {
+  display: flex;
+  justify-content: center;
+  color: rgb(41, 129, 60);
+  font-size: 80px;
+}
+.mainGridNew .input {
+  margin: 2%;
+  width: 90%;
+  padding-left: 10px;
+  font-size: 20px;
+  height: 25px;
+  border-radius: 5px;
+}
+.addForm .cardText{
+  
+}
+.changeForm .updateVal {
+  margin: 2%;
+  width: 65%;
+  padding-left: 10px;
+  font-size: 20px;
+  height: 25px;
+  border-radius: 5px;
+}
+.mainGridNew .inputArea {
+  margin: 2%;
+  width: 90%;
+  padding-left: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.mainGridNew .select {
+  margin: 2%;
+  width: 93%;
+  padding-left: 10px;
+  font-size: 18px;
+  height: 30px;
+  border-radius: 5px;
+}
+.mainGridNew .addForm {
+  grid-area: addForm;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: solid 1px #000000;
+  margin-right: 3%;
+  height: fit-content;
+}
+
+.mainGridNew .changeForm {
+  grid-area: changeForm;
+  display: block;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: solid 1px #000000;
+  margin-right: 3%;
+}
+.addForm .addNew {
+  background-color: #398b23;
+  font-size: 18px;
+  border-radius: 10px;
+  height: 40px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  margin-left: 2%;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.addForm .clear {
+  background-color: #B21500;
+  font-size: 18px;
+  border-radius: 10px;
+  height: 40px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  margin: 2%;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.changeForm .update {
+  background-color: #398b23;
+  font-size: 18px;
+  border-radius: 10px;
+  height: 40px;
+  border: none;
+
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  margin-left: 2%;
+  padding-right: 30px;
+  padding-left: 30px;
+  
+}

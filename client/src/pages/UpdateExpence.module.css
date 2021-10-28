@@ -1,0 +1,23 @@
+.mainGrid {
+  display: grid;
+  width: auto;
+  height: 500px;
+  background-color: rgb(255, 255, 255);
+  grid-template-columns: 0.7fr 1fr 1fr 1fr;
+  grid-template-rows: 0.05fr 0.1fr 0.1fr 0.2fr;
+  grid-template-areas:
+    "navigation heading  heading heading"
+    "navigation expence  expence expence"
+    "navigation expence  expence expence"
+    "navigation expence expence expence";
+}
+.heading {
+  margin: 1%;
+  grid-area: heading;
+}
+
+
+.expences {
+  grid-area: expence;
+  margin: 1%;
+}
