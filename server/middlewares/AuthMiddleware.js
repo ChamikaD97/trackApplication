@@ -1,5 +1,6 @@
 import pkg from 'jsonwebtoken';
 const { verify } = pkg;
+
 const validateToken = (req, res, next) =>{
     const accessToken = req.header("accessToken");
     
