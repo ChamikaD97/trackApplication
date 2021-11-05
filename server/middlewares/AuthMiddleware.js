@@ -5,7 +5,6 @@ const validateToken = (req, res, next) =>{
     const accessToken = req.header("accessToken");
 
     if (!accessToken) return res.json({error: "You should login to access"});
-
     
     try{
         const validToken = verify(accessToken,"importantsecret");
